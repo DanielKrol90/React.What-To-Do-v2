@@ -1,9 +1,9 @@
 import './Header.css'
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header>
-            <h1>List of Things to DO v.2</h1>
+            <h1>{props.title}</h1>
         </header>
     );
 }

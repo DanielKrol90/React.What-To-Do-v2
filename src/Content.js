@@ -1,26 +1,7 @@
 import "./Content.css";
-import React, { useState } from "react";
 import { FaTrashAlt } from "react-icons/fa";
 
-const Content = () => {
-  const [items, setItems] = useState([
-    { id: 1, checked: false, item: "Get Up from Bed" },
-    { id: 2, checked: false, item: "East and Code" },
-    { id: 3, checked: false, item: "Go to Sleep" },
-  ]);
-
-  const handleCheck = (id) => {
-    const listItems = items.map((item) =>
-        item.id === id ? { ...item, checked: !item.checked } : item);
-        setItems(listItems);
-        localStorage.setItem("ListOfThingsToDo", JSON.stringify(listItems));
-  };
-
-  const handleDelete = (id) => {
-        const listItems = items.filter((item) => item.id !== id);
-        setItems(listItems);
-        localStorage.setItem("ListOfThingsToDo", JSON.stringify(listItems));
-  }
+const Content = ({items, handleCheck, handleDelete }) => {
 
   return (
     <section>
