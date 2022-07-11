@@ -1,8 +1,9 @@
 const Content = () => {
+    const today = new Date();
 
     return (
         <footer>
-            <p>Footer here</p>
+            <p>Copy Rights &copy; {today.getFullYear()}</p>
         </footer>
     );
 }
