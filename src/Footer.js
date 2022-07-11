@@ -1,3 +1,5 @@
+import './Footer.css'
+
 const Content = () => {
     const today = new Date();
 
