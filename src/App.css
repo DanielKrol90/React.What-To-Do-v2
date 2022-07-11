@@ -16,10 +16,6 @@ ul {
   padding: 0 0.25rem 0.25rem;
 }
 
-ul li::before {
-  content: "\200B";
-}
-
 .item {
   display: flex;
   justify-content: flex-start;
@@ -29,9 +25,6 @@ ul li::before {
   background-color: #eee;
 }
 
-.item:first-child {
-  margin: 0;
-}
 
 .item input[type="checkbox"] {
   text-align: center;
@@ -52,4 +45,19 @@ ul li::before {
 .item > label {
   font-size: 0.75rem;
   flex-grow: 1;
+}
+
+.item svg {
+  width: 48px;
+  min-width: 48px;
+  height: 36px;
+  font-size: 1rem;
+  color: steelblue;
+  cursor: pointer;
+}
+
+.item svg:focus, 
+.item svg:hover {
+  color: red;
+  outline: none;
 }
