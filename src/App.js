@@ -8,11 +8,7 @@ import Footer from "./Footer";
 import AddItem from "./AddItem";
 
 function App() {
-  const [items, setItems] = useState([
-    { id: 1, checked: false, item: "Get Up from Bed" },
-    { id: 2, checked: false, item: "East and Code" },
-    { id: 3, checked: false, item: "Go to Sleep" },
-  ]);
+  const [items, setItems] = useState(JSON.parse(localStorage.getItem("ListOfThingsToDo")));
 
   const [newItem, setNewItem] = useState("");
 
