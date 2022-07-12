@@ -1,9 +1,8 @@
-import "./Content.css";
 import ItemList from "./ItemList";
 
 const Content = ({ items, handleCheck, handleDelete }) => {
   return (
-    <section>
+    <div>
       {items.length ? (
         <ItemList
           items={items}
@@ -13,7 +12,7 @@ const Content = ({ items, handleCheck, handleDelete }) => {
       ) : (
         <p>This list is Empty, add Something</p>
       )}
-    </section>
+    </div>
   );
 };
 
